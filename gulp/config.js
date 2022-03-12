@@ -7,7 +7,7 @@ const config = {
     sass: `${srcPath}/scss`,
     js: `${srcPath}/js`,
     fonts: `${srcPath}/assets/fonts`,
-    images: `${srcPath}/assets/images`,
+    images: `${srcPath}/assets/img`,
     iconsMono: `${srcPath}/assets/icons/mono`,
     iconsMulti: `${srcPath}/assets/icons/multi`,
     pug: `${srcPath}/pug`,

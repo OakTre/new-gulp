@@ -3,13 +3,14 @@ import pug from 'gulp-pug';
 import gulpif from 'gulp-if';
 import plumber from 'gulp-plumber';
 import { setup as emittySetup } from '@zoxon/emitty';
+import pugInclude from 'pug-include-glob';
 import config from '../config';
 
 const emittyPug = emittySetup(config.src.pug, 'pug', {
   makeVinylFile: true,
 });
 
-global.watch = false;
+global.isPugWatch = false;
 global.emittyChangedFile = {
   path: '',
   stats: null,
@@ -20,19 +21,19 @@ export const pugBuild = () => (
     .pipe(plumber())
     .pipe(
       gulpif(
-        global.watch,
+        global.isPugWatch,
         emittyPug.stream(
           global.emittyChangedFile.path,
           global.emittyChangedFile.stats,
         ),
       ),
     )
-    .pipe(pug({ pretty: true }))
+    .pipe(pug({ pretty: true, plugins: [pugInclude()] }))
     .pipe(gulp.dest(config.dest.html))
 );
 
 export const pugWatch = () => {
-  global.watch = true;
+  global.isPugWatch = true;
 
   gulp.watch(`${config.src.pug}/**/*.pug`, pugBuild)
     .on('all', (event, filepath, stats) => {
