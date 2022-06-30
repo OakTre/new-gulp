@@ -10,4 +10,5 @@ package-lock.json
 /.git/
 /**/_backstage
 /**/Thumbs.db
-# /app/
+build
+gsap-bonus

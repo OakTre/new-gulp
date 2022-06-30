@@ -5,12 +5,12 @@
 
 	// colors
 	--color-dark: #333;
-	--color-bg: #fff;
+	--color-bg: #fafcfe;
 	--color-white: #fff;
 }
 
 @import "./helpers/**/*";
 @import './vendor/**/*';
 @import "./settings/**/*";
-@import "./blocks/**/*";
+@import "./UI/**/*";
 @import './pages/**/*';
