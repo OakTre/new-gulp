@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="description" content="Описание сайта">
     <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
@@ -17,20 +17,27 @@
   </head>
   <body class="page-home">
     <div class="page-wrapper">
+
       <header class="header">
-        <div class="site-container"><a href="/"><img src="assets/images/logo.svg" alt="Logo"></a>
+        <div class="site-container">
+          <a href="/">
+            <img src="assets/images/logo.svg" alt="Logo">
+          </a>
           <button class="button" data-path="modal">Открыть модалку</button>
         </div>
       </header>
+
       <main class="page-main main">
         <section class="intro">
           <div class="site-container">
             <picture>
-              <source type="image/webp" srcset="assets/images/test/test-image.webp" alt="test"/><img src="assets/images/test/test-image.jpg" alt="test"/>
+              <source type="image/webp" srcset="assets/images/test/test-image.webp" alt="test">
+              <img src="assets/images/test/test-image.jpg" alt="test">
             </picture>
           </div>
         </section>
       </main>
+
       <footer class="footer">
         <div class="site-container">
           <h1>footer</h1>
@@ -40,11 +47,13 @@
     <div class="modal">
       <div class="modal__container" data-target="modal">
         <div class="modal__content">
-          <button class="button-reset modal__close-btn modal-close" type="button"><span></span><span></span></button>
+          <button class="button-reset modal__close-btn modal-close" type="button"><span></span><span></span>
+          </button>
           <div class="modal__legend">Поздравляем вы открыли модалку!</div>
         </div>
       </div>
     </div>
+
   </body>
   <script src="assets/js/main.js?v=0.0.0.0"></script>
   <script src="assets/js/backend.js?v=0.0.0.0"></script>
